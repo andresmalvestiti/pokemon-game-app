@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground: #333333;
+  --background: #F0F0F0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,14 +15,21 @@
   }
 }
 
+@layer components {
+  .card-bg{
+    background: rgb(117,189,255);
+background: radial-gradient(circle, rgba(117,189,255,1) 0%, rgba(219,231,255,1) 100%);
+
+  }
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-rgb);
+  background: var(--background);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @layer utilities {

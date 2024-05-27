@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        pokemon: {
+          primary: '#FFCB05',
+          secondary: '#E23724',
+          tertiary: '#3F72AF',
+          background: '#F0F0F0',
+          text: '#333333',
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
